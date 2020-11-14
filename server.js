@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
 //Database Connection
-const url = "mongodb://localhost/pizza";
+const url = "mongodb://localhost/hub";
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -50,6 +50,7 @@ app.use(
     cookie: { maxAge: 1000 * 60 * 60 * 24 },
   })
 );
+
 
 //Passport config
 const passportInit = require('./app/config/passport')
